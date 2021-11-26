@@ -4,6 +4,8 @@ echo $HOSTNAME
 
 echo "--- installing ----"
 
+cp -r /root/bootstrap /mnt/
+
 pacstrap /mnt base base-devel git
 
 

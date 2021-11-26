@@ -49,3 +49,4 @@ mkdir /mnt/etc
 genfstab -U -p /mnt >> /mnt/etc/fstab
 cat /mnt/etc/fstab
 
+echo "---- partitioning done ---"
