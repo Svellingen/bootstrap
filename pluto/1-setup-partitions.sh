@@ -6,7 +6,7 @@ echo "---- setup partitions ---"
 
 sgdisk --clear \
          --new=1:0:+500MiB --typecode=1:ef00 --change-name=1:EFI \
-         --new=2:0:0       --typecode=3:8e00 --change-name=3:crypt /dev/sda
+         --new=2:0:0       --typecode=2:8e00 --change-name=2:crypt /dev/sda
 
 echo "type passphrase"
 read -s pass
