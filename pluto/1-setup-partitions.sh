@@ -36,14 +36,14 @@ vgscan
 vgchange -ay
 
 mkfs.ext4 /dev/volgroup0/lv_root
-mount /dev/volgroup1/lv_root /mnt
+mount /dev/volgroup0/lv_root /mnt
 
 mkdir /mnt/boot
 mount /dev/disk/by-partlabel/EFI /mnt/boot
 
 mkfs.ext4 /dev/volgroup0/lv_home
 mkdir /mnt/home
-mount /dev/volgroup1/lv_home /mnt/home
+mount /dev/volgroup0/lv_home /mnt/home
 
 mkdir /mnt/etc
 genfstab -U -p /mnt >> /mnt/etc/fstab
