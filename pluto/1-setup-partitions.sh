@@ -22,7 +22,6 @@ fi
 
 # format drives
 mkfs.fat -F32 -n EFI /dev/disk/by-partlabel/EFI
-mkfs.ext4 /dev/disk/by-partlabel/swap
 
 echo -n $pass | cryptsetup luksFormat --align-payload=8192 -s 256 -c aes-xts-plain64 /dev/disk/by-partlabel/crypt -q
 echo -n $pass | cryptsetup open /dev/disk/by-partlabel/crypt lvm
