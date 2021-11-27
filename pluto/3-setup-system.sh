@@ -27,7 +27,6 @@ timedatectl set-timezone Europe/Oslo
 
 # set hostname
 hostnamectl set-hostname pluto
-
 echo "127.0.0.1 localhost" >> /etc/hosts
 echo "127.0.0.1 pluto" >> /etc/hosts
 
@@ -70,8 +69,8 @@ echo "--- microcodes ---"
 pacman -S --noconfirm intel-ucode
 
 ## video driver
+pacman -S --noconfirm xf86-video-intel
 pacman -S --noconfirm mesa
-
 
 echo "--- system setup done ---"
 
