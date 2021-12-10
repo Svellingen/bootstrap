@@ -7,6 +7,7 @@ echo "---   ---"
 pacman -Syy
 
 pacman -S --noconfirm linux linux-headers linux-lts linux-lts-headers
+pacman -S --noconfirm linux-firmware
 
 pacman -S --noconfirm vim
 pacman -S --noconfirm git
